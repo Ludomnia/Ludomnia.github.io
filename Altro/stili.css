@@ -1,0 +1,45 @@
+body{
+	margin:0;
+}
+
+.barra{
+	position: -webki-sticky;
+	position:sticky;
+	background-color:#9097FF;
+	min-width:100%;
+	min-height:50px;
+	text-align: center;
+	top:0;
+	z-index:1;
+	border:1px;
+	border-style:solid;
+}
+
+.articolibarra{
+	float:left;
+	padding-left:10px;
+}
+
+.articolibarra:hower{
+	transform: scale(1.2);
+}
+
+.sezione{
+	max-width:97%;
+	margin:auto;
+	height:auto;
+	overflow:auto;
+	background-color:pink;
+}
+
+.mezzo{
+	min-width:48%;
+	max-width:48%;
+	min-height:100%;
+	display:inline;
+	padding:1px 10px 1px 10px;
+}
+
+.spazio{
+	min-height:40px;
+}
