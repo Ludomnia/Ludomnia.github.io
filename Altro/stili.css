@@ -44,3 +44,11 @@ body{
 .spazio{
 	min-height:40px;
 }
+
+.ad{
+	max-width:80%;
+	margin:auto;
+	height:auto;
+	overflow:auto;
+	background-color:pink;
+}
