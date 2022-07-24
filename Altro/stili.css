@@ -51,6 +51,7 @@ body{
 	height:auto;
 	overflow:auto;
 	background-color:pink;
-	min-height:100px;
+	max-height:100px;
+	min-height:150px;
 	min-width:80%;
 }
