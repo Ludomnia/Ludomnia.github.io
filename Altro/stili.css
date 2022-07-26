@@ -2,10 +2,27 @@ body{
 	margin:0;
 }
 
+ol{	
+	font-size:18px;
+	text-align: center;
+  	list-style-position: inside;
+}
+
+a{
+	color:black;
+}
+
+
+
+li{	
+	padding-right:15px;
+	color:#35515e
+}
+
 .barra{
 	position: -webki-sticky;
 	position:sticky;
-	background-color:#9097FF;
+	background-color:#A16BFF;
 	min-width:100%;
 	min-height:50px;
 	text-align: center;
@@ -13,12 +30,15 @@ body{
 	z-index:1;
 	border:1px;
 	border-style:solid;
+	font-size:20px;
+	overflow:hidden;
+
 }
 
 .articolibarra{
 	float:left;
 	padding-left:10px;
-	background-color:#9097FF;
+	background-color:inherit;
 }
 
 .articolibarra:hower{
@@ -31,6 +51,7 @@ body{
 	height:auto;
 	overflow:auto;
 	background-color:pink;
+	border-radius:20px;
 }
 
 .mezzo{
@@ -54,4 +75,18 @@ body{
 	max-height:100px;
 	min-height:150px;
 	min-width:80%;
+}
+
+.titoletti{
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	color:#D263FF;
+}
+
+.testogenerico{
+	padding-left:10px;
+	padding-right:10px;
+	color:#35515e;
+	font-size:18px;
 }
