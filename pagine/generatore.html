@@ -105,8 +105,13 @@ input{
 <script type="text/javascript">
 function saveAspdf() {
 var pdf = new jsPDF('p','pt','a4');
+var nome=document.getElementById("specialTab").value.toString();
+	
 pdf.addHTML(document.body,function() {
-    pdf.save('web.pdf');
+	if(nome!="")
+    		pdf.save(nome+'.pdf');
+	else
+		pdf.save('character.pdf');
 });
 }
 </script>
