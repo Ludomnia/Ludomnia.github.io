@@ -541,14 +541,7 @@ input{
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
 
 
-<script type="text/javascript">
-
-function impagina(pdf){
-	$.get('templ.html', function (data) {
-    		data = $(data).find('#base');
-		pdf.addHTML(data.get(0));
-	});
-}	
+<script type="text/javascript">	
 
 function saveAspdf() {
 var pdf = new jsPDF('p','pt','a4');
