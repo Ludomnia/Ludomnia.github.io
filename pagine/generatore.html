@@ -104,6 +104,14 @@ input{
 
 
 <script type="text/javascript">
+
+function impagina(pdf){
+	$.get('templ.html', function (data) {
+    		data = $(data).find('#base');
+		pdf.ADDhtml(data);
+	});
+}	
+
 function saveAspdf() {
 var pdf = new jsPDF('p','pt','a4');
 var nome=document.getElementById("nome").value.toString();
