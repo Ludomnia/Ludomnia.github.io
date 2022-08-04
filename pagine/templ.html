@@ -19,9 +19,9 @@ input{
 }
 
 .campiGen{
-	max-width:90%;
-	min-width:90%;
-	display:inline;
+	max-width:50%;
+	min-width:50%;
+	display:block;
 	background-color:pink;
 	padding:10px;
 	border:1px solid;
@@ -30,13 +30,15 @@ input{
 	padding:10px;
 	margin-left:5%;
 	margin-bottom:20px;
-	float:left;
+	margin:auto;
+	margin-top:30px;
+
 }
 
 .cubetti{
-	min-width:10%;
-	max-width:10%;
-	display:inline;
+	min-width:30%;
+	max-width:30%;
+	display:inline-block;
 	background-color:pink;
 	padding:10px;
 	margin-left:20px;
@@ -44,7 +46,8 @@ input{
 	border:1px solid;
 	border-radius:20px;
 	text-align:center;
-	float:left;
+	margin:auto;
+	margin-top:30px;
 }
 
 .mez{
@@ -56,31 +59,23 @@ input{
 }
 
 .cubi{
-	min-width:16%;
-	max-width:16%;
-	display:inline;
+	min-width:49%;
+	max-width:49%;
+	display:inline-block;
 	background-color:pink;
-	padding:10px;
-	margin-left:2%;
-	margin-bottom:20px;
 	border:1px solid;
 	border-radius:20px;
 	text-align:center;
-	float:left;
 }
 
 .skil{
-	min-width:30%;
-	max-width:30%;
-	display:inline;
+	min-width:49%;
+	max-width:49%;
+	display:inline-block;
 	background-color:pink;
-	padding:10px;
-	margin-left:20px;
-	margin-bottom:20px;
 	border:1px solid;
 	border-radius:20px;
 	text-align:center;
-	float:left;
 }
 
 .specialT td{
@@ -99,7 +94,6 @@ input{
 </style>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
 
 
@@ -131,12 +125,16 @@ impagina(pdf);
 <a href="generatore.html"><p class="articolibarra">Generatore personaggi</p></a>
 </div>
 
-<div style="min-width:100%;min-height:100%;background-image:url('../Altro/sfondoBackground.jpg');z-index:0;background-size:100px 100px">
+<div id="base" style="min-width:100%;min-height:100%;background-image:url('../Altro/sfondoBackground.jpg');z-index:0;background-size:100px 100px">
 <div class="spazio"></div>
 
-<div id="primoCampo" style="max-width:50%;min-width:50%;display:inline;float:left;">
+<div class="cubeti" style="max-width:10%;min-width:10%;padding-left:1%;padding-top:0;margin:auto;">
+	<img src="../Altro/colorSmall.png" alt="Compatible with the Cypher System" style="border-radius:100px;background-color:white;max-heigth:100%;max-width:100%">
+</div>
+
+<div id="primoCampo" style="max-width:50%;min-width:50%;display:block;margin:auto;">
 	
-	<div class="campiGen">
+	<div class="campiGen" style="max-width:90%;min-width:90%">
 		<form>
 		<label for="nome"><b>Name:</b></label>
 		<input type="text" id="nome" name="nome" autocomplete="off" style="min-width:30%;">
@@ -145,7 +143,7 @@ impagina(pdf);
 		</form>
 	</div>
 
-	<div class="campiGen">
+	<div class="campiGen" style="max-width:90%;min-width:90%">
 		<form>
 		<label for="type">(type):</label>
 		<input type="type" id="tipo" name="type" autocomplete="off" style="min-width:30%;">
@@ -155,32 +153,31 @@ impagina(pdf);
 	</div>
 </div>
 
-<div id="cub1" class="cubetti">
+<div id="contieniCubetti" style="display:block;max-width:50%;min-width:50%;margin:auto;margin-top:30px;">
+<div class="cubetti">
 	<form>
 	<label for="tier"><b>Tier:</b></label> <br>
 	<input type="text" id="tier" name="tier" maxlength="4" size="2" style="margin-top:10px;font-size:20px">
 	</form>
 </div>
 
-<div id="cub1" class="cubetti">
+<div class="cubetti">
 	<form>
 	<label for="xp"><b>Xp:</b></label> <br>
 	<input type="text" id="xp" name="xp" maxlength="4" size="2" style="margin-top:10px;font-size:20px">
 	</form>
 </div>
 
-<div id="cub1" class="cubetti">
+<div class="cubetti">
 	<form>
 	<label for="effort"><b>Effort:</b></label> <br>
 	<input type="text" id="effort" name="effort" maxlength="4" size="2" style="margin-top:10px;font-size:20px">
 	</form>
 </div>
-
-<div class="cubeti" style="max-width:7%;min-width:7%;padding-left:1%;padding-top:0;">
-	<img src="../Altro/colorSmall.png" alt="Compatible with the Cypher System" style="border-radius:100px;background-color:white;max-heigth:100%;max-width:100%">
 </div>
 
-<div class="campiGen">
+
+<div class="campiGen" >
 	<form>
 	<label for="title"><b>Advancement:</b></label> <br>
 	<input type="checkbox" id="stat" name="stat" value="Stat">
@@ -196,6 +193,54 @@ impagina(pdf);
 	</form>
 </div>
 
+<div id="contieniCubi" style="display:block;max-width:50%;min-width:50%;margin:auto;margin-top:30px;">
+<div class="cubetti">
+	<form>
+	<label for="title"><b>Might</b></label> <br>
+	<input type="text" id="might" name="might" size="2" maxlength="2" style="font-size:25px;margin-top:10px;">
+	</form>
+	<div class="mez">
+	<input type="text" id="mpool" name="mpool" size="2" maxlenght="2"><br>
+	<label for="mpool"><b>Pool</b></label>
+	</div>
+	<div class="mez">
+	<input type="text" id="medge" name="medge" size="2" maxlenght="2"><br>
+	<label for="medge"><b>Edge</b></label>
+	</div>
+</div>
+
+
+<div class="cubetti">
+	<form>
+	<label for="title"><b>Intellect</b></label> <br>
+	<input type="text" id="int" name="int" size="2" maxlength="2" style="font-size:25px;margin-top:10px;">
+	</form>
+	<div class="mez">
+	<input type="text" id="ipool" name="ipool" size="2" maxlenght="2"><br>
+	<label for="ipool"><b>Pool</b></label>
+	</div>
+	<div class="mez">
+	<input type="text" id="iedge" name="iedge" size="2" maxlenght="2"><br>
+	<label for="iedge"><b>Edge</b></label>
+	</div>
+</div>
+
+<div class="cubetti">
+	<form>
+	<label for="title"><b>Speed</b></label> <br>
+	<input type="text" id="speed" name="speed" size="2" maxlength="2" style="font-size:25px;margin-top:10px;">
+	</form>
+	<div class="mez">
+	<input type="text" id="spool" name="spool" size="2" maxlenght="2"><br>
+	<label for="spool"><b>Pool</b></label>
+	</div>
+	<div class="mez">
+	<input type="text" id="sedge" name="sedge" size="2" maxlenght="2"><br>
+	<label for="sedge"><b>Edge</b></label>
+	</div>
+</div>
+</div>
+<div id="contieniCubi2" style="display:block;max-width:50%;min-width:50%;margin:auto;margin-top:30px;">
 <div class="cubi">
 	<form>
 	<label for="title"><b>Recovery rolls</b></label> <br>
@@ -212,52 +257,6 @@ impagina(pdf);
 
 <div class="cubi">
 	<form>
-	<label for="title"><b>Might</b></label> <br>
-	<input type="text" id="might" name="might" size="2" maxlength="2" style="font-size:25px;margin-top:10px;">
-	</form>
-	<div class="mez">
-	<input type="text" id="mpool" name="mpool" size="2" maxlenght="2"><br>
-	<label for="mpool"><b>Pool</b></label>
-	</div>
-	<div class="mez">
-	<input type="text" id="medge" name="medge" size="2" maxlenght="2"><br>
-	<label for="medge"><b>Edge</b></label>
-	</div>
-</div>
-
-
-<div class="cubi">
-	<form>
-	<label for="title"><b>Intellect</b></label> <br>
-	<input type="text" id="int" name="int" size="2" maxlength="2" style="font-size:25px;margin-top:10px;">
-	</form>
-	<div class="mez">
-	<input type="text" id="ipool" name="ipool" size="2" maxlenght="2"><br>
-	<label for="ipool"><b>Pool</b></label>
-	</div>
-	<div class="mez">
-	<input type="text" id="iedge" name="iedge" size="2" maxlenght="2"><br>
-	<label for="iedge"><b>Edge</b></label>
-	</div>
-</div>
-
-<div class="cubi">
-	<form>
-	<label for="title"><b>Speed</b></label> <br>
-	<input type="text" id="speed" name="speed" size="2" maxlength="2" style="font-size:25px;margin-top:10px;">
-	</form>
-	<div class="mez">
-	<input type="text" id="spool" name="spool" size="2" maxlenght="2"><br>
-	<label for="spool"><b>Pool</b></label>
-	</div>
-	<div class="mez">
-	<input type="text" id="sedge" name="sedge" size="2" maxlenght="2"><br>
-	<label for="sedge"><b>Edge</b></label>
-	</div>
-</div>
-
-<div class="cubi">
-	<form>
 	<label for="title"><b>Damage Track</b></label><br>
 	<input type="checkbox" id="imp" name="imp" value="Imp">
 	<label for="imp">Impaired:<br>no major or minor on rolls, 17-20 on roll is +1 damage and +1 effort</label><br>
@@ -266,6 +265,8 @@ impagina(pdf);
 	</form>
 </div>
 
+</div>
+<div id="contieniSkill" style="display:block;max-width:50%;min-width:50%;margin:auto;margin-top:30px;">
 <div class="skil">
 	<table style="margin:auto">
 		<tr>
@@ -386,6 +387,10 @@ impagina(pdf);
 	</table>
 	</form>
 </div>
+
+</div>
+
+<div id="contieniSkill2" style="display:block;max-width:50%;min-width:50%;margin:auto;margin-top:30px;">
 <div class="skil">
 	<table style="margin:auto">
 		<tr>
@@ -446,14 +451,6 @@ impagina(pdf);
 	</table>
 	</form>
 </div>
-
-<div class="skil">
-	<form>
-	<label for="title"><b>Equipment</b></label><br><br>
-	<textarea id=equip" name="equip" rows="20" cols="40" style="border:0px;min-width:90%"></textarea>
-	</form>
-</div>
-
 <div class="skil">
 	<table style="margin:auto">
 		<tr>
@@ -502,6 +499,18 @@ impagina(pdf);
 	</form>
 </div>
 
+</div>
+
+<div id="contieniAltro" style="display:block;max-width:50%;min-width:50%;margin:auto;margin-top:30px;">
+<div class="skil">
+	<form>
+	<label for="title"><b>Equipment</b></label><br><br>
+	<textarea id=equip" name="equip" rows="20" cols="40" style="border:0px;min-width:90%"></textarea>
+	</form>
+</div>
+
+
+
 <div class="skil">
 	<form>
 	<label for="title"><b>Cyphers </b></label><br><br>
@@ -509,8 +518,10 @@ impagina(pdf);
 	</form>
 </div>
 
-<div id="contieniAltro2" style="display:block;max-width:90%;min-width:90%;margin:auto;margin-top:30px;">
-<div class="skil" style="max-width:49%;min-width:49%;margin:0;padding:0;padding-bottom:10px;padding-top:10px">
+</div>
+
+<div id="contieniAltro2" style="display:block;max-width:50%;min-width:50%;margin:auto;margin-top:30px;">
+<div class="skil">
 	<form>
 	<label for="title"><b>Note</b></label><br><br>
 	<textarea id=equip" name="equip" rows="20" cols="40" style="border:0px;min-width:90%"></textarea>
@@ -519,7 +530,7 @@ impagina(pdf);
 
 
 
-<div class="skil" style="max-width:49%;min-width:49%;margin:0;padding:0;padding-bottom:10px;padding-top:10px;">
+<div class="skil">
 	<form>
 	<label for="title"><b>Background</b></label><br><br>
 	<textarea id=equip" name="equip" rows="20" cols="40" style="border:0px;min-width:90%"></textarea>
@@ -528,8 +539,7 @@ impagina(pdf);
 
 </div>
 
-
-<div class="campiGen" style="display:inline-block;float:none;margin-top:30px;">
+<div class="campiGen" style="display:block;float:none;margin:auto;margin-top:30px">
 	<label for="title"><b>Special Abilities:</b></label> <br>
 		<table>
 			<div id="autocomplete" style="width:40%px;display:inline;position:relative">
@@ -545,10 +555,6 @@ impagina(pdf);
 			<td><b>Cost:</b></td>
 		</tr>
 	</table>
-</div>
-
-<div class="campiGen">
-	<button type="button" id="convert" onclick="saveAspdf()";>Salva il tutto come PDF</button>
 </div>
 
 <div class="spazio"></div>
