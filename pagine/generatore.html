@@ -98,32 +98,6 @@ input{
 
 </style>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
-
-
-<script type="text/javascript">
-
-function impagina(pdf){
-	$.get('templ.html', function (data) {
-    		data = $(data).find('#base');
-		pdf.addHTML(data);
-	});
-}	
-
-function saveAspdf() {
-var pdf = new jsPDF('p','pt','a4');
-var nome=document.getElementById("nome").value.toString();
-impagina(pdf);
-	if(nome!="")
-    		pdf.save(nome+'.pdf');
-	else
-		pdf.save('character.pdf');
-
-}
-</script>
-
 </head>
 <body>
 
@@ -562,5 +536,30 @@ impagina(pdf);
 <div class="spazio"></div>
 
 <script src="../Altro/special.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
+
+<script type="text/javascript">
+
+function impagina(pdf){
+	$.get('templ.html', function (data) {
+    		data = $(data).find('#base');
+		pdf.addHTML(data);
+	});
+}	
+
+function saveAspdf() {
+var pdf = new jsPDF('p','pt','a4');
+var nome=document.getElementById("nome").value.toString();
+impagina(pdf);
+	if(nome!="")
+    		pdf.save(nome+'.pdf');
+	else
+		pdf.save('character.pdf');
+
+}
+</script>
 </div>
 </body>
