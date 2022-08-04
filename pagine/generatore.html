@@ -6,6 +6,10 @@
 	<title>Generatore di Pc</title>
 <style>
 
+div{
+	overflow:hidden;
+}
+
 input{
 	text-align:center;
 }
@@ -83,11 +87,32 @@ input{
 	border:1px solid;
 }
 
+.barrette{
+	background-color:white;
+	border:1px solid;
+	display:block;
+}
+.barrette:hover{
+	background-color:gray;
+}
+
 </style>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
+
+<script type="text/javascript">
+function saveAspdf() {
+var pdf = new jsPDF('p','pt','a4');
+pdf.addHTML(document.body,function() {
+    pdf.save('web.pdf');
+});
+}
+</script>
+
 </head>
 <body>
-
-<script src="../Altro/special.js"></script>
 
 <div class="barra">
 <a href="../index.html"><p class="articolibarra">Home</p></a>
@@ -99,13 +124,13 @@ input{
 <p class="articolibarra">Articoli</p>
 <p class="articolibarra">Canale twitch</p>
 <a href="generatore.html"><p class="articolibarra">Generatore personaggi</p></a>
-
 </div>
 
 <div style="min-width:100%;min-height:100%;background-image:url('../Altro/sfondoBackground.jpg');z-index:0;background-size:100px 100px">
 <div class="spazio"></div>
 
 <div style="max-width:50%;min-width:50%;display:inline;float:left;">
+	
 	<div class="campiGen">
 		<form>
 		<label for="nome"><b>Name:</b></label>
@@ -144,6 +169,10 @@ input{
 	<label for="effort"><b>Effort:</b></label> <br>
 	<input type="text" id="effort" name="effort" maxlength="4" size="2" style="margin-top:10px;font-size:20px">
 	</form>
+</div>
+
+<div class="cubeti" style="max-width:7%;min-width:7%;padding-left:1%;padding-top:0;">
+	<img src="../Altro/colorSmall.png" alt="Compatible with the Cypher System" style="max-heigth:100%;max-width:100%">
 </div>
 
 <div class="campiGen">
@@ -226,7 +255,7 @@ input{
 	<form>
 	<label for="title"><b>Damage Track</b></label><br>
 	<input type="checkbox" id="imp" name="imp" value="Imp">
-	<label for="imp">Impaired:<br>no major or minor on rolls, 17-20 on roll is +1 damage and +1 effort</label>
+	<label for="imp">Impaired:<br>no major or minor on rolls, 17-20 on roll is +1 damage and +1 effort</label><br>
 	<input type="checkbox" id="deb" name="deb" value="Deb">
 	<label for="deb">Debilitated:<br>can move only an immediate distance, can't move if speed 0</label>	
 	</form>
@@ -476,25 +505,29 @@ input{
 </div>
 
 <div class="campiGen" style="display:inline-block;float:none">
-	<form>
-	<label for="title"><b>Special Abilities:</b></label>
-	<form autocomplete="off">
-		<div class="autocomplete" style="width:40%px;">
-   	 		<input id="myInput" type="text" name="myCountry" placeholder="Cerca special ability">
-  		</div>
-		<button type="button" id="Adds" onclick="addSpecial()">Aggiungi</button>
-		<button type="button" id="RemoveS" onclick="removeS()">Rimuovi ultima</button>
-	</form>
-	<table style="width:100%;background-color:white;border:1px solid;" id="specialTab" class="specialT">
+	<label for="title"><b>Special Abilities:</b></label> <br>
+		<table>
+			<div id="autocomplete" style="width:40%px;display:inline;position:relative">
+   	 			<input id="myInput" type="text" name="myCountry" autocomplete="off" placeholder="Cerca special ability">
+  			</div>
+			<button type="button" id="Adds" onclick="addSpecial()";>Aggiungi</button>
+			<button type="button" id="RemoveS" onclick="removeS()">Rimuovi ultima</button>
+		<div id="pop" style="margin:auto;max-width:20%">
+		</div>
+	<table style="width:100%;background-color:white;border:1px solid;margin-top:20px;" id="specialTab" class="specialT">
 		<tr>
 			<td><b>Name:</b></td>
 			<td><b>Cost:</b></td>
 		</tr>
 	</table>
-	</form>
+</div>
+
+<div class="campiGen">
+	<button type="button" id="convert" onclick="saveAspdf()";>Salva il tutto come PDF</button>
 </div>
 
 <div class="spazio"></div>
 
+<script src="../Altro/special.js"></script>
 </div>
 </body>
