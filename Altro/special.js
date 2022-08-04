@@ -1,4 +1,9 @@
-
+function impagina(pdf){
+	$.get('templ.html', function (data) {
+    		data = $(data).find('#base');
+		pdf.ADDhtml(data);
+	});
+}
 
 function addSpecial(){
 	var tab=document.getElementById("specialTab");
