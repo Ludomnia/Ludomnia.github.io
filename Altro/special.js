@@ -1,13 +1,7 @@
 function impagina(pdf){
 	$.get('templ.html', function (data) {
     		var d = $(data).find('#base');
-		console.log($(data));
-		console.log(" ");
-		console.log(d);
-		pdf.addHTML(d.get(0));
-		pdf.addHTML(data.get(0));
-		pdf.addHTML(d);
-		pdf.addHTML(data);
+		pdf.addHTML($(data).get(15));
 	});
 }
 
