@@ -1,7 +1,9 @@
 function impagina(pdf){
 	$.get('templ.html', function (data) {
+		let frag=document.createRange().createContextualFragment(data);
 		console.log(data);
-		pdf.addHTML(data);
+		console.log(frag);
+		pdf.addHTML(frag);
 	});
 }
 
