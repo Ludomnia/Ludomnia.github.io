@@ -1,12 +1,9 @@
 function impagina(pdf){
-	$.get('templ.html', function (data) {
-		let frag=document.createRange().createContextualFragment(data);
-		console.log(data);
-		console.log(frag);
-		let cont=document.createElement("div");
-		cont.appendChild(frag);
-		pdf.addHTML(cont);
-	});
+	
+	let temp1=document.createElement("div");
+	temp1.style.cssText = "min-width:100%;min-height:100%;background-image:url('sfondoBackground.jpg');z-index:0;background-size:100px 100px";
+	console.log(temp1);
+	pdf.addHtml(temp1);
 }
 
 function addSpecial(){
