@@ -3,7 +3,9 @@ function impagina(pdf){
 		let frag=document.createRange().createContextualFragment(data);
 		console.log(data);
 		console.log(frag);
-		pdf.addHTML(frag);
+		let cont=document.createElement("div");
+		cont.appendChild(frag);
+		pdf.addHTML(cont);
 	});
 }
 
