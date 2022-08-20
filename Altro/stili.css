@@ -1,5 +1,7 @@
 body{
 	margin:0;
+	font-family:Verdana, sans-serif;
+	font-size:16px;
 }
 
 ol{	
@@ -46,12 +48,13 @@ li{
 }
 
 .sezione{
-	max-width:97%;
+	max-width:80%;
 	margin:auto;
 	height:auto;
 	overflow:auto;
 	background-color:pink;
 	border-radius:20px;
+	
 }
 
 .mezzo{
