@@ -3,7 +3,7 @@ function impagina(pdf){
 		console.log(data);
 		console.log(data.body);
 		console.log(data.get(0));
-		pdf.addHTML(data,function(){
+		pdf.addHTML(document.body,function(){
 			console.log("entrato");	   
 		});
 	});
