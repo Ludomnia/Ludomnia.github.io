@@ -3,9 +3,9 @@ function impagina(pdf){
 		console.log(data);
 		console.log(data.body);
 		console.log(data.get(0));
-		pdf.addHTML(data,function(
-			pdf.save();	   
-		));
+		pdf.addHTML(data,function(){
+			console.log("entrato");	   
+		});
 	});
 }
 
