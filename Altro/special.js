@@ -1,9 +1,12 @@
 function impagina(pdf){
-	
-	pdf.addHTML(document.body)
-    	console.log("started");
-    	pdf.save()
-    	console.log("finished");
+	$.get('templ.html', function (data) {
+		console.log(data);
+		console.log(data.body);
+		console.log(data.get(0));
+		pdf.addHTML(data,function(
+			console.log("speriamo");	   
+		));
+	});
 }
 
 function addSpecial(){
