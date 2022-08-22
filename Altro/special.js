@@ -1,8 +1,6 @@
 function impagina(pdf){
 	
-	let temp1=document.createElement("div");
-	temp1.style.cssText = "min-width:100%;min-height:100%;background-image:url('sfondoBackground.jpeg');z-index:0;background-size:100px 100px";
-	console.log(temp1);
+	let temp1=document.body;
 	pdf.addHTML(temp1);
 }
 
