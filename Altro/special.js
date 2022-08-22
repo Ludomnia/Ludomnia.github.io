@@ -1,10 +1,9 @@
 function impagina(pdf){
 	
-	pdf.addHTML(document.body).then(()=> {
+	pdf.addHTML(document.body)
     	console.log("started");
     	pdf.save()
     	console.log("finished");
-});
 }
 
 function addSpecial(){
