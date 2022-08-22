@@ -4,7 +4,7 @@ function impagina(pdf){
 		console.log(data.body);
 		console.log(data.get(0));
 		pdf.addHTML(data,function(
-			console.log("speriamo");	   
+			pdf.save();	   
 		));
 	});
 }
