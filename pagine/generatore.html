@@ -547,10 +547,13 @@ function saveAspdf() {
 var pdf = new jsPDF('p','pt','a4');
 var nome=document.getElementById("nome").value.toString();
 $.get('templ.html', function (data) {
-		pdf.addHTML(document.body,function(){
+		pdf.addHTML(data,function(){
 			console.log("entrato");	   
 		});
 });
+pdf.addHTML(document.body,function(){
+			console.log("entrato 2");	   
+		});
 	if(nome!="")
     		pdf.save(nome+'.pdf');
 	else
