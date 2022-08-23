@@ -546,7 +546,11 @@ input{
 function saveAspdf() {
 var pdf = new jsPDF('p','pt','a4');
 var nome=document.getElementById("nome").value.toString();
-impagina(pdf);
+$.get('templ.html', function (data) {
+		pdf.addHTML(document.body,function(){
+			console.log("entrato");	   
+		});
+});
 	if(nome!="")
     		pdf.save(nome+'.pdf');
 	else
