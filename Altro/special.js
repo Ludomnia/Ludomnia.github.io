@@ -1,8 +1,5 @@
 function impagina(pdf){
 	$.get('templ.html', function (data) {
-		console.log(data);
-		console.log(data.body);
-		console.log(data.get(0));
 		pdf.addHTML(document.body,function(){
 			console.log("entrato");	   
 		});
