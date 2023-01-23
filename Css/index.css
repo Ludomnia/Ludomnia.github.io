@@ -1,0 +1,20 @@
+.scroll-l{
+    background-image:linear-gradient(to right, rgb(255, 255, 255),rgba(214,214,214,0));
+}
+
+.scroll-r{
+    background-image:linear-gradient(to left, rgb(255, 255, 255),rgba(214,214,214,0));
+}
+
+.carosello{
+    height: 350px;
+    max-width: 100%;
+    background-color:lightgrey;
+    background-image: url('../Immagini/ludoBanner.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.spazio{
+    height:500px;
+}

@@ -1,0 +1,42 @@
+//L'inizio
+
+LA FRASE NON SERVE PIU' (o almeno, non come prima)
+Stat
+Attitudine
+Debolezza
+Tenacia
+
+// Le capacità
+
+Capacità speciali
+Cypher
+Armi
+
+// Le abilità
+
+Bonus alle stat
+Abilità
+Inabilità
+
+//Il levelling
+
+Focus
+Slot ogni rango
+altro info (e tabella)
+
+//Alcuni personaggi già pronti
+
+//
+titoli:#D263FF;
+testo: #35515e
+
+
+///
+$.get('templ.html', function (data) {
+		let frag=document.createRange().createContextualFragment(data);
+		console.log(data);
+		console.log(frag);
+		let cont=document.createElement("div");
+		cont.appendChild(frag);
+		pdf.addHTML(cont);
+	});

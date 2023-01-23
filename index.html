@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>	
+	<title>Ludomnia</title>
+	<link rel="stylesheet" href="Css/generali.css">
+	<link rel="stylesheet" href="Css/index.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+
+</head>
+<body onload="caroselloStart()">
+	<nav class="navbar navbar-expand-sm bg-dark p-0 mb-0">
+		<div class="container-fluid">
+			<ul class="navbar-nav m-0 p-0">
+				<li class="nav-item p-0">
+					<button class="btn-bg nav-link text-light bg-dark border-0" href="#"><p class="h4">Home</p></a>
+				</li>
+				<li class="nav-item">
+					<button class="btn-bg nav-link text-light bg-dark border-0" href="#"><p class="h4">Thelema</p></a>
+				</li>
+				<li class="nav-item">
+					<button class="btn-bg nav-link text-light bg-dark border-0" href="#"><p class="h4">Slot Mode</p></a>
+				</li>
+				<li class="nav-item">
+					<button class="btn-bg nav-link text-light bg-dark border-0" href="#"><p class="h4">Raeverto</p></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container-fluid carosello p-0" id="slideCarosello">
+		<div class="d-flex justify-content-between m-auto h-100">
+			<button class="btn btn-lg scroll-l border-0" onclick="muovi(1)">Indietro</button>
+			<button class="btn btn-lg scroll-r border-0" onclick="muovi(-1)">Avanti</button>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<p class="h1 text-center my-5"><b>I nostri progetti</b></p>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-1" style="min-height: 50px;"></div>
+			<div class="col-lg text-center spazio">
+				<img src="Immagini/thelemaPage.jpg" class="immagini">
+			</div>
+			<div class="col-1" style="min-height: 50px;"></div>
+			<div class="col-lg text-center spazio">
+				<img src="Immagini/slotPage.jpg" class="immagini">
+			</div>
+			<div class="col-1" style="min-height: 50px;"></div>
+			<div class="col-lg text-center spazio">
+				<img src="Immagini/fap.png" class="immagini">
+			</div>
+			<div class="col-1" style="min-height: 50px;"></div>
+		</div>
+		
+	</div>
+	
+	
+	<script src="Js/index.js"></script>
+</body>
+</html>

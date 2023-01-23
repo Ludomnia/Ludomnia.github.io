@@ -1,0 +1,48 @@
+public class Test7 {
+    public static void main(String[] args) {
+        A a = new A();
+        int r1 = a.m(1);
+        A a2 = new B(new Z());
+        int r2 = a2.m(2);
+        B b = new B(new Z());
+        int r3=b.m(3);
+        System.out.print("" + r1 + " " + r2 + " " + r3);
+    }
+}
+class Z {}
+class A {
+    static int val = 7;
+    int m(int x) { val--; return x * val; }
+}
+class B extends A {
+    Z z;
+    B(Z z) {this.z = z; val++; }
+    int m(int x) { return x * val + 1; }
+}
+
+---------------------
+6 15 25
+---------------------
+import java.util.*;
+public class Test6 {
+    public static void main(String[] args) {
+        A[] a = new A[4];
+        for (int i = 0; i < a.length; i++) {
+        if (i%2 != 0) a[i]= new A(i);
+        else a[i]= new B(i);
+        }
+        List<A> l = new ArrayList<>(Arrays.asList(a));
+        for(A e: l) System.out.print(e.m(5) + " ");
+    }
+}
+class A {
+    int x;
+    A(int x) { this.x = x + 1; }
+    public int m(int z) { return x + z; }
+}
+class B extends A {
+    B(int x) { super(x); this.x = x + 2; }
+}
+-------------------------------------------
+7 7 9 9 
+----------------------------------------
