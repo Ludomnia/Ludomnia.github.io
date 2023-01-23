@@ -7,7 +7,7 @@ function caroselloStart(){
     img.push("Immagini/thelemaBanner.png");
     document.getElementById("slideCarosello").style.backgroundImage="url('Immagini/slotBanner.png')";
     document.getElementById("slideCarosello").style.backgroundImage="url('Immagini/thelemaBanner.png')";
-    document.getElementById("slideCarosello").style.backgroundImage="url('Immagini/thelemaBanner.png')";
+    document.getElementById("slideCarosello").style.backgroundImage="url('Immagini/ludoBanner.png')";
 
     setInterval(function(){
         document.getElementById("slideCarosello").style.backgroundImage="url("+img[index]+")";
