@@ -1,15 +1,24 @@
-body{
-	margin:0;
-	font-family:Verdana, sans-serif;
-	font-size:16px;
-    background-image: url('../Immagini/sfondoBackground.jpeg');
-    background-size:100px 100px;
-    background-repeat: repeat;
-    min-height: 500px;
-}
-
 .immagini{
     max-height: 100%;
     border-radius: 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
 }
 
+.bordi-top{
+    border-width: 3px 0px;
+    border-style: solid;
+}
+
+a{
+    color: white !important;
+}
+
+.bga-light{
+    background-color: rgba(255,255,255,0.75) !important;
+}
+
+form :hover{
+    text-decoration: underline;
+}

@@ -13,51 +13,66 @@
 		<div class="container-fluid">
 			<ul class="navbar-nav m-0 p-0">
 				<li class="nav-item p-0">
-					<button class="btn-bg nav-link text-light bg-dark border-0" href="#"><p class="h4">Home</p></a>
+                    <form action="index.html">
+					    <button class="btn-bg nav-link text-light bg-dark border-0"><p class="h4">Home</p>
+					</form>
 				</li>
 				<li class="nav-item">
-					<button class="btn-bg nav-link text-light bg-dark border-0" href="#"><p class="h4">Thelema</p></a>
+                    <form action="pagine/thelema.html">
+                        <button class="btn-bg nav-link text-light bg-dark border-0"><p class="h4">Thelema</p>
+					</form>
 				</li>
 				<li class="nav-item">
-					<button class="btn-bg nav-link text-light bg-dark border-0" href="#"><p class="h4">Slot Mode</p></a>
+                    <form action="index.html">
+					    <button class="btn-bg nav-link text-light bg-dark border-0"><p class="h4">Slot Mode</p>
+					</form>
 				</li>
 				<li class="nav-item">
-					<button class="btn-bg nav-link text-light bg-dark border-0" href="#"><p class="h4">Raeverto</p></a>
+                    <form action="index.html">
+					    <button class="btn-bg nav-link text-light bg-dark border-0"><p class="h4">Raeverto</p>
+					</form>
 				</li>
 			</ul>
 		</div>
 	</nav>
 
 	<div class="container-fluid carosello p-0" id="slideCarosello">
-		<div class="d-flex justify-content-between m-auto h-100">
-			<button class="btn btn-lg scroll-l border-0" onclick="muovi(1)">Indietro</button>
-			<button class="btn btn-lg scroll-r border-0" onclick="muovi(-1)">Avanti</button>
+		<div class="d-flex justify-content-between m-auto h-100 row">
+			<button class="btn btn-lg scroll-l border-0 col-1" onclick="muovi(1)">Indietro</button>
+			<a class="col" href="index.html" id="link-carosello"></a>
+			<button class="btn btn-lg scroll-r border-0 col-1" onclick="muovi(-1)">Avanti</button>
 		</div>
 	</div>
 
-	<div class="container-fluid bg-light my-5 p-4">
+	<div class="container-fluid bg-light my-5 p-4 bordi-top">
 		<p class="h1 text-center "><b>I nostri progetti</b></p>
 	</div>
 
-	<div class="container-fluid">
-		<div class="row">
+	<div class="container-fluid bga-light p-3">
+		<div class="row mt-3">
 			<div class="col-1" style="min-height: 50px;"></div>
 			<div class="col-lg text-center spazio">
-				<img src="Immagini/thelemaPage.jpg" class="immagini">
+				<a href="pagine/thelema.html">
+					<img src="Immagini/thelemaPage.jpg" class="immagini">
+				</a>
 			</div>
 			<div class="col-1" style="min-height: 50px;"></div>
 			<div class="col-lg text-center spazio">
-				<img src="Immagini/slotPage.jpg" class="immagini">
+				<a href="index.html">
+					<img src="Immagini/slotPage.jpg" class="immagini">
+				</a>
 			</div>
 			<div class="col-1" style="min-height: 50px;"></div>
 			<div class="col-lg text-center spazio">
-				<img src="Immagini/fap.png" class="immagini">
+				<a href="index.html">
+					<img src="Immagini/fap.png" class="immagini">
+				</a>
 			</div>
 			<div class="col-1" style="min-height: 50px;"></div>
 		</div>
 	</div>
 	
-	<div class="container-fluid bg-light my-5 p-4">
+	<div class="container-fluid bg-light my-5 p-4 bordi-top">
 		<div class="container-fluid  w-75">
 			<h2 class="my-3">L'universo di Ludomnia</h2>
 			<p>Ludomnia è un progetto che ha lo scopo di divulgare e promuovere l’importanza ricreativa, culturale ed educativa della dimensione ludica in tutti i suoi media, dai giochi di ruolo e di carte, fino a quelli da tavolo e ai videogiochi.
@@ -67,7 +82,7 @@
 		</div>
 	</div>
 
-	<div class="container-fluid bg-light my-5 p-4">
+	<div class="container-fluid bg-light my-5 p-4 bordi-top">
 		<div class="container-fluid  w-75">
 			<h2 class="my-3">Un "nuovo" Cypher system: the No Class System</h2>
 			<p>Per chi non conoscesse il Cypher System, si tratta di un sistema che permette di giocare di ruolo qualsiasi genere narrativo con facilità e con tanta scorrevolezza. 
@@ -79,7 +94,7 @@
 		</div>
 	</div>
 
-	<div class="container-fluid bg-light my-5 p-4">
+	<div class="container-fluid bg-light my-5 p-4 bordi-top">
 		<div class="container-fluid  w-75">
 			<h2 class="my-3">Monster Hunter e Stories sul nostro Cypher</h2>
 			<p>Ludomnia ama portare vari brand e franchise su Cypher System. Tra quelli scelti, non poteva mancare Monster Hunter (e il suo fratellino Stories). 
@@ -91,7 +106,7 @@
 		</div>
 	</div>
 
-	<div class="container-fluid bg-light my-5 p-4">
+	<div class="container-fluid bg-light my-5 p-4 bordi-top">
 		<div class="container-fluid  w-75">
 			<h2 class="my-3">Abbiamo anche i pokemon!</h2>
 			<p>Qualsiasi amante dei Pokémon ha sempre sognato vivere nel loro mondo con un gioco di ruolo. Ludomnia è dunque fiera di presentarvi il suo adattamento su Cypher System.
