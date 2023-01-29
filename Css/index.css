@@ -20,9 +20,6 @@
 }
 
 body{
-	margin:0;
-	font-family:Verdana, sans-serif;
-	font-size:16px;
     background-image: url('../Immagini/sfondoBackground.jpeg');
     background-size:100px 100px;
     background-repeat: repeat;
